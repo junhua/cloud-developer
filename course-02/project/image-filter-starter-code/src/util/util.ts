@@ -19,7 +19,7 @@ export async function filterImageFromURL(inputURL: string): Promise<string>{
         .write(__dirname+outpath, (img)=>{
             resolve(__dirname+outpath);
         });
-    });
+    }).catch(error => { console.log('Oops', error.message); });
 }
 
 // deleteLocalFiles
